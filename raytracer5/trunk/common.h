@@ -21,7 +21,7 @@ namespace Raytracer {
 #define SQRLENGTH(A)	(A.x*A.x+A.y*A.y+A.z*A.z)
 #define SQRDISTANCE(A,B) ((A.x-B.x)*(A.x-B.x)+(A.y-B.y)*(A.y-B.y)+(A.z-B.z)*(A.z-B.z))
 
-#define SAMPLES			4
+#define SAMPLES			1
 #define GRIDSIZE		8
 #define GRIDSHFT		3
 #define EPSILON			0.001f

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="twister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testapp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="surface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="raytracer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="twister.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="raytracer.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="surface.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="textures\wood.tga">
+      <Filter>Textures</Filter>
+    </None>
+    <None Include="textures\marble.tga">
+      <Filter>Textures</Filter>
+    </None>
+    <None Include="textures\checker.tga">
+      <Filter>Textures</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Textures">
+      <UniqueIdentifier>{4913a0cb-e70b-4c4a-b4d0-173e9e8615f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{85e7e7ea-2bf3-41bb-9c97-eca0901179de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{97e8432a-68c2-46e1-82c3-59f9de16ad98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

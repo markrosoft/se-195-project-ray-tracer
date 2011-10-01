@@ -1,0 +1,67 @@
+/* OpenCL variables */
+static cl_context context;
+static cl_mem colorBuffer;
+static cl_mem pixelBuffer;
+static cl_mem seedBuffer;
+static cl_mem sphereBuffer;
+static cl_mem cameraBuffer;
+static cl_command_queue commandQueue;
+static cl_program program;
+static cl_kernel kernel;
+static unsigned int workGroupSize = 1;
+static char *kernelFileName = "rendering_kernel.cl";
+
+static void FreeBuffers()
+	colorBuffer
+	pixelBuffer
+	seedBuffer
+
+static void AllocateBuffers()
+	colorBuffer
+	pixelBuffer
+	seedBuffer
+
+static char *ReadSources(const char *fileName)
+
+static void SetUpOpenCL()
+	cl_int status = clGetPlatformIDs(0, NULL, &numPlatforms);
+	status = clGetPlatformIDs(numPlatforms, platforms, NULL);
+	status = clGetPlatformInfo(platforms[i], CL_PLATFORM_VENDOR, sizeof(pbuf), pbuf,NULL);
+	status = clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, 32, devices, &deviceCount);
+	status = clGetDeviceInfo(devices[i], CL_DEVICE_TYPE, sizeof(cl_device_type), &type, NULL);
+	context = clCreateContext(cprops, 1, &selectedDevice, NULL, NULL, &status);
+	commandQueue = clCreateCommandQueue(context, devices[0], prop, &status);
+	sphereBuffer = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeof(Sphere) * sphereCount, NULL, &status);
+	cameraBuffer = clCreateBuffer(context, CL_MEM_READ_ONLY, sizeof(Camera), NULL, &status);
+	status = clEnqueueWriteBuffer(commandQueue, cameraBuffer, CL_TRUE, 0, sizeof(Camera), &camera, 0, NULL, NULL);
+	AllocateBuffers();
+	program = clCreateProgramWithSource(context, 1, &sources, NULL, &status);
+	status = clBuildProgram(program, 1, devices, "-I. ", NULL, NULL);
+	status = clGetProgramBuildInfo(program, devices[0], CL_PROGRAM_BUILD_LOG, retValSize, buildLog, NULL);
+	kernel = clCreateKernel(program, "RadianceGPU", &status);
+	status = clGetKernelWorkGroupInfo(kernel,devices[0],CL_KERNEL_WORK_GROUP_SIZE,sizeof(size_t),&gsize,NULL);
+	workGroupSize = (unsigned int) gsize;
+
+static void ExecuteKernel()
+	cl_int status = clEnqueueNDRangeKernel(commandQueue, kernel, 1, NULL, globalThreads, localThreads, 0, NULL, NULL);
+
+void UpdateRendering()
+	status = clSetKernelArg(kernel, 1, sizeof(cl_mem), (void *)&seedBuffer);
+	// 1 through 8
+	ExecuteKernel();
+	status = clEnqueueReadBuffer(commandQueue, pixelBuffer, CL_TRUE, 0, width * height * sizeof(unsigned int), pixels, 0, NULL, NULL);
+
+void ReInitScene()
+	cl_int status = clEnqueueWriteBuffer(commandQueue, sphereBuffer, CL_TRUE, 0, sizeof(Sphere) * sphereCount, spheres, 0, NULL, NULL);
+
+void ReInit(const int reallocBuffers)
+	// Check if I have to reallocate buffers
+	if (reallocBuffers) {FreeBuffers(); UpdateCamera(); AllocateBuffers();
+	} else { UpdateCamera();}
+	cl_int status = clEnqueueWriteBuffer(commandQueue, cameraBuffer, CL_TRUE, 0, sizeof(Camera), &camera, 0, NULL, NULL);
+
+int main(int argc, char *argv[])
+	UpdateCamera();
+	SetUpOpenCL();
+	InitGlut(argc, argv, "SmallPT GPU V1.6 (Written by David Bucciarelli)");
+	glutMainLoop();

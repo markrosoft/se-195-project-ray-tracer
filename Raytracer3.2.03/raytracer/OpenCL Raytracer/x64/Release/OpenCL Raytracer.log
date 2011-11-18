@@ -1,0 +1,26 @@
+﻿Build started 11/17/2011 10:39:18 PM.
+     1>Project "C:\Users\Mark\Documents\DevMaster_RayTracing\Raytracer3.2.03\raytracer\OpenCL Raytracer\OpenCL Raytracer.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "x64\Release\OpenCL Raytracer.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\AMD APP\\include" /I"C:\Users\Mark\My Documents\AMD APP\\samples\opencl\SDKUtil\include" /I"C:\Users\Mark\My Documents\AMD APP\\include" /Zi /nologo /W3 /WX- /O2 /Oi /GL /D ATI_OS_WIN /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt raytracer.c
+         raytracer.c
+     1>raytracer.c(728): warning C4800: 'cl_bool' : forcing value to bool 'true' or 'false' (performance warning)
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Mark\Documents\DevMaster_RayTracing\Raytracer3.2.03\raytracer\x64\Release\OpenCL Raytracer.exe" /NOLOGO /LIBPATH:"C:\Program Files (x86)\AMD APP\\lib\x86_64" /LIBPATH:"C:\Users\Mark\My Documents\AMD APP\\lib\x86_64" /LIBPATH:"C:\Users\Mark\My Documents\AMD APP\\TempSDKUtil\lib\release\x86_64" OpenCL.lib SDKUtil.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Release\OpenCL Raytracer.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Mark\Documents\DevMaster_RayTracing\Raytracer3.2.03\raytracer\x64\Release\OpenCL Raytracer.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Mark\Documents\DevMaster_RayTracing\Raytracer3.2.03\raytracer\x64\Release\OpenCL Raytracer.lib" /MACHINE:X64 x64\Release\bitmap.obj
+         x64\Release\raytracer.obj
+         x64\Release\raytracer_non_OpenCL.obj
+         x64\Release\scene.obj
+         Generating code
+         Finished generating code
+         OpenCL Raytracer.vcxproj -> C:\Users\Mark\Documents\DevMaster_RayTracing\Raytracer3.2.03\raytracer\x64\Release\OpenCL Raytracer.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Mark\Documents\DevMaster_RayTracing\Raytracer3.2.03\raytracer\x64\Release\OpenCL Raytracer.exe;#1" /manifest "x64\Release\OpenCL Raytracer.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\OpenCL Raytracer.unsuccessfulbuild".
+         Touching "x64\Release\OpenCL Raytracer.lastbuildstate".
+     1>Done Building Project "C:\Users\Mark\Documents\DevMaster_RayTracing\Raytracer3.2.03\raytracer\OpenCL Raytracer\OpenCL Raytracer.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.73

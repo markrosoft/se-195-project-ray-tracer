@@ -1,0 +1,7 @@
+Cam-Cam's
+$(SolutionDir)$(Configuration)\$(PlatformShortName)\
+$(Configuration)\$(PlatformName)\
+
+Mine
+$(SolutionDir)$(Platform)\$(Configuration)\
+$(Platform)\$(Configuration)\
